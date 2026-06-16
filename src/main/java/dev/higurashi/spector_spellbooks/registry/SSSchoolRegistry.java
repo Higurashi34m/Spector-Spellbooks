@@ -3,7 +3,6 @@ package dev.higurashi.spector_spellbooks.registry;
 import dev.higurashi.spector_spellbooks.SpectorSpellbooks;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.SchoolType;
-import io.redspace.ironsspellbooks.damage.ISSDamageTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.resources.ResourceLocation;
@@ -27,8 +26,8 @@ public class SSSchoolRegistry {
                     Component.translatable("school.spector_spellbooks.spector").setStyle(Style.EMPTY.withColor(0xE9FCFF)),
                     SSAttributeRegistry.SPECTOR_SPELL_POWER,
                     SSAttributeRegistry.SPECTOR_MAGIC_RESIST,
-                    () -> SoundEvents.EVOKER_CAST_SPELL,
-                    ISSDamageTypes.FIRE_MAGIC
+                    () -> SoundEvents.VEX_DEATH,
+                    SSDamageTypeRegistry.SPECTOR_MAGIC
             ));
 
     private static RegistryObject<SchoolType> register(Supplier<SchoolType> schoolType) {
