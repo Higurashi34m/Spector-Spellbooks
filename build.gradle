@@ -139,11 +139,10 @@ dependencies {
     // Player Animator
     runtimeOnly fg.deobf(libs.playerAnimator)
 
-    // Optimization mods
-    runtimeOnly fg.deobf(libs.bundles.optimizations)
-
-    // Utility mods
-    runtimeOnly fg.deobf(libs.bundles.utilities)
+    if (!gradle.startParameter.taskNames.contains('runData')) {
+        runtimeOnly fg.deobf(libs.bundles.optimizations)
+        runtimeOnly fg.deobf(libs.bundles.utilities)
+    }
 }
 
 // Tasks
