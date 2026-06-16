@@ -20,6 +20,10 @@ public class SSEnUsLanguageProvider extends BaseLanguageProvider {
 
         // Item
         addItem(SSItemRegistry.SPECTOR_ESSENCE, "Spector Essence");
+        addItem(SSItemRegistry.SPECTOR_HELMET, "Spector Helmet");
+        addItem(SSItemRegistry.SPECTOR_CHESTPLATE, "Spector Chestplate");
+        addItem(SSItemRegistry.SPECTOR_LEGGINGS, "Spector Leggings");
+        addItem(SSItemRegistry.SPECTOR_BOOTS, "Spector Boots");
 
         // School
         addSchool(SSSchoolRegistry.SPECTOR, "spector");

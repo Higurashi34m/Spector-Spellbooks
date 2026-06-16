@@ -15,5 +15,10 @@ public class SSItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(SSItemRegistry.SPECTOR_ESSENCE.get());
         basicItem(SpectorSpellbooks.id("scroll_spector"));
+
+        basicItem(SSItemRegistry.SPECTOR_HELMET.get());
+        basicItem(SSItemRegistry.SPECTOR_CHESTPLATE.get());
+        basicItem(SSItemRegistry.SPECTOR_LEGGINGS.get());
+        basicItem(SSItemRegistry.SPECTOR_BOOTS.get());
     }
 }
