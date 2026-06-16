@@ -1,0 +1,13 @@
+.gradle/
+.idea/
+
+# Gradle / build outputs
+build/
+run/
+out/
+
+# IDE / OS generated files
+*.iml
+.DS_Store
+
+src/generated/resources/.cache/

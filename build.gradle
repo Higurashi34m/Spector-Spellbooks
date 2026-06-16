@@ -1,0 +1,196 @@
+//file:noinspection DependencyNotationArgument
+
+// Plugins
+plugins {
+    id 'maven-publish'
+    id 'net.minecraftforge.gradle' version '[6.0.16,6.2)'
+    id 'org.spongepowered.mixin'   version '0.7.+'
+    id 'org.parchmentmc.librarian.forgegradle' version '1.+'
+}
+
+// Project
+base.archivesName = "${mod_id}-forge"
+version           = "${minecraft_version}+${mod_version}"
+group             = mod_group_id
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+// Minecraft / Forge
+minecraft {
+    copyIdeResources = true
+    mappings channel: mapping_channel, version: mapping_version
+    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+
+    runs {
+        configureEach {
+            workingDirectory = project.file('run')
+
+            jvmArgs(
+                    '-Xmx4G', '-Xms1G',
+                    '-XX:+UseG1GC',
+                    '-XX:+ParallelRefProcEnabled',
+                    '-XX:MaxGCPauseMillis=80',
+                    '-XX:+UnlockExperimentalVMOptions',
+                    '-XX:G1NewSizePercent=20',
+                    '-XX:G1MaxNewSizePercent=40',
+                    '-XX:G1HeapRegionSize=8M',
+                    '-XX:G1ReservePercent=20',
+                    '-XX:InitiatingHeapOccupancyPercent=15',
+                    '-XX:+UseStringDeduplication'
+            )
+
+            property 'forge.logging.markers',           'REGISTRIES'
+            property 'forge.logging.console.level',     'debug'
+            property 'forge.enabledGameTestNamespaces',  mod_id
+
+            mods { "${mod_id}" { source sourceSets.main } }
+        }
+
+        client {
+            jvmArgs "-XX:+AllowEnhancedClassRedefinition", "-XX:HotswapMode=9"
+        }
+
+        server {
+            workingDirectory = project.file('run/server')
+            args '--nogui'
+        }
+
+        data {
+            args '--mod', mod_id, '--all',
+                    '--output',   file('src/generated/resources/'),
+                    '--existing', file('src/main/resources/')
+        }
+
+        gameTestServer {
+            workingDirectory = project.file("run/gametest")
+        }
+    }
+}
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+jarJar.enable()
+
+// Mixin
+mixin {
+    add    sourceSets.main, "${mod_id}.refmap.json"
+    config "${mod_id}.mixins.json"
+}
+
+// Repositories
+repositories {
+    mavenLocal()
+    mavenCentral()
+
+    maven {
+        name = "CurseMaven"
+        url  = "https://cursemaven.com"
+    }
+
+    maven {
+        name = "JEI"
+        url  = "https://maven.blamejared.com/"
+    }
+
+    maven {
+        name = "Iron's Maven"
+        url  = "https://code.redspace.io/releases"
+    }
+
+    maven {
+        name = "Curios"
+        url  = "https://maven.theillusivec4.top/"
+    }
+
+    maven {
+        name = 'GeckoLib'
+        url  = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+    }
+
+    maven {
+        name = "Player Animator"
+        url  = 'https://maven.kosmx.dev/'
+    }
+}
+
+// Dependencies
+dependencies {
+    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+
+    // JEI
+    compileOnly fg.deobf(libs.jei.api)
+    runtimeOnly fg.deobf(libs.jei)
+
+    // Jade
+    runtimeOnly fg.deobf(libs.jade)
+
+    // Iron's Spells'n Spellbooks
+    implementation fg.deobf(libs.ironsSpellbooks)
+
+    // Iron's Lib
+    implementation fg.deobf(libs.ironsLib)
+
+    // Curios API
+    compileOnly fg.deobf(libs.curios.get().toString() + ":api")
+    runtimeOnly fg.deobf(libs.curios)
+
+    // GeckoLib
+    runtimeOnly fg.deobf(libs.geckoLib)
+
+    // Player Animator
+    runtimeOnly fg.deobf(libs.playerAnimator)
+
+    // Optimization mods
+    runtimeOnly fg.deobf(libs.bundles.optimizations)
+
+    // Utility mods
+    runtimeOnly fg.deobf(libs.bundles.utilities)
+}
+
+// Tasks
+processResources {
+    var properties = [
+            // Minecraft
+            minecraft_version      : minecraft_version,
+            minecraft_version_range: minecraft_version_range,
+
+            // Forge
+            forge_version          : forge_version,
+            forge_version_range    : forge_version_range,
+
+            // Mod
+            mod_id                 : mod_id,
+            mod_name               : mod_name,
+            mod_version            : mod_version,
+            mod_authors            : mod_authors,
+            mod_credits            : mod_credits,
+            mod_license            : mod_license,
+            mod_description        : mod_description,
+            mod_url                : mod_url,
+            mod_issue              : mod_issue,
+
+            mod_group_id           : mod_group_id,
+    ]
+
+    inputs.properties(properties)
+    filesMatching(['META-INF/mods.toml', 'pack.mcmeta', '*.mixins.json']) {
+        expand(properties)
+    }
+
+    from('LICENSE.txt')
+}
+
+tasks.withType(Jar).configureEach {
+    preserveFileTimestamps = false
+    reproducibleFileOrder  = true
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+jar.finalizedBy('reobfJar')
+
+tasks.named('jarJar', Jar) {
+    archiveClassifier = ""
+    dependsOn 'reobfJar'
+}

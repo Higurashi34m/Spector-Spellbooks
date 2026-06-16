@@ -1,0 +1,83 @@
+[versions]
+jei         = "15.20.0.130"
+jade        = "6855440" # 11.13.2
+
+ironsSpellbooks = "1.20.1-3.16.1"
+ironsLib        = "1.20.1-1.1.0"
+curios          = "5.14.1+1.20.1"
+geckoLib        = "4.8.3"
+playerAnimator  = "1.0.2-rc1+1.20"
+
+# optimizations
+embeddium   = "5681725" # 0.3.31
+chloride    = "8064899" # 1.7.7
+modernfix   = "8055630" # 5.27.22
+ferritecore = "4810975" # 6.0.1
+fastload    = "4706149" # 3.4.0
+radium      = "5706069" # 0.12.4
+optileaves  = "7189078" # 1.2
+
+# utility
+appleSkin         = "4770828" # 2.5.1
+betterF3          = "4863626" # 7.0.2
+betterModlist     = "7535242" # 0.1.15
+clothConfig       = "5729105" # 11.1.136
+emi               = "8081375" # 1.1.24
+forgeConfigScreen = "4672356" # 8.0.2
+mouseTweaks       = "5338457" # 2.25.1
+oculus            = "6020952" # 1.8.0
+polyglotTooltip   = "7980858" # 1.5.0
+
+[libraries]
+jei-api     = { module = "mezz.jei:jei-1.20.1-forge-api",    version.ref = "jei" }
+jei         = { module = "mezz.jei:jei-1.20.1-forge",        version.ref = "jei" }
+jade        = { module = "curse.maven:jade-324717",          version.ref = "jade" }
+
+ironsSpellbooks = { module = "io.redspace:irons_spellbooks",                     version.ref = "ironsSpellbooks" }
+ironsLib        = { module = "io.redspace:irons_lib",                            version.ref = "ironsLib" }
+curios          = { module = "top.theillusivec4.curios:curios-forge",            version.ref = "curios"}
+geckoLib        = { module = "software.bernie.geckolib:geckolib-forge-1.20.1",   version.ref = "geckoLib" }
+playerAnimator  = { module = "dev.kosmx.player-anim:player-animation-lib-forge", version.ref = "playerAnimator"}
+
+# optimizations
+embeddium   = { module = "curse.maven:embeddium-908741",       version.ref = "embeddium" }
+chloride    = { module = "curse.maven:chloride-931925",        version.ref = "chloride" }
+modernfix   = { module = "curse.maven:modernfix-790626",       version.ref = "modernfix" }
+ferritecore = { module = "curse.maven:ferritecore-429235",     version.ref = "ferritecore" }
+fastload    = { module = "curse.maven:fastload-630620",        version.ref = "fastload" }
+radium      = { module = "curse.maven:radium-reforged-570017", version.ref = "radium" }
+optileaves  = { module = "curse.maven:optileaves-1191403",     version.ref = "optileaves" }
+
+# utility
+appleSkin         = { module = "curse.maven:appleskin-248787",                version.ref = "appleSkin" }
+betterF3          = { module = "curse.maven:betterf3-401648",                 version.ref = "betterF3" }
+betterModlist     = { module = "curse.maven:better-modlist-neoforge-1089803", version.ref = "betterModlist" }
+clothconfig       = { module = "curse.maven:cloth-config-348521",             version.ref = "clothConfig" }
+emi               = { module = "curse.maven:emi-580555",                      version.ref = "emi" }
+forgeConfigScreen = { module = "curse.maven:config-menus-forge-544048",       version.ref = "forgeConfigScreen" }
+mouseTweaks       = { module = "curse.maven:mouse-tweaks-60089",              version.ref = "mouseTweaks" }
+oculus            = { module = "curse.maven:oculus-581495",                   version.ref = "oculus" }
+polyglotTooltip   = { module = "curse.maven:polyglottooltip-1485078",         version.ref = "polyglotTooltip" }
+
+[bundles]
+optimizations = [
+    "embeddium",
+    "chloride",
+    "modernfix",
+    "ferritecore",
+    "fastload",
+    "radium",
+    "optileaves",
+]
+
+utilities = [
+    "appleSkin",
+    "betterF3",
+    "betterModlist",
+    "clothconfig",
+    "emi",
+    "forgeConfigScreen",
+    "mouseTweaks",
+    "oculus",
+    "polyglotTooltip"
+]
