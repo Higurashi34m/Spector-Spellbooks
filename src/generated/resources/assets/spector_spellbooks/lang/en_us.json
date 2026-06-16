@@ -1,5 +1,6 @@
 {
   "attribute.spector_spellbooks.spector_magic_resist": "Spector Magic Resistance",
   "attribute.spector_spellbooks.spector_spell_power": "Spector Spell Power",
+  "item.spector_spellbooks.spector_essence": "Spector Essence",
   "school.spector_spellbooks.spector": "spector"
 }
