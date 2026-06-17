@@ -6,5 +6,7 @@
   "item.spector_spellbooks.spector_essence": "Spector Essence",
   "item.spector_spellbooks.spector_helmet": "Spector Helmet",
   "item.spector_spellbooks.spector_leggings": "Spector Leggings",
-  "school.spector_spellbooks.spector": "spector"
+  "school.spector_spellbooks.spector": "spector",
+  "spell.spector_spellbooks.spector_arrow": "Spector Arrow",
+  "spell.spector_spellbooks.spector_arrowguide": ""
 }

@@ -3,6 +3,7 @@ package dev.higurashi.spector_spellbooks.datagen.client.lang;
 import dev.higurashi.spector_spellbooks.registry.SSAttributeRegistry;
 import dev.higurashi.spector_spellbooks.registry.SSItemRegistry;
 import dev.higurashi.spector_spellbooks.registry.SSSchoolRegistry;
+import dev.higurashi.spector_spellbooks.registry.SSSpellRegistry;
 import net.minecraft.data.PackOutput;
 
 import java.util.Locale;
@@ -27,5 +28,8 @@ public class SSEnUsLanguageProvider extends BaseLanguageProvider {
 
         // School
         addSchool(SSSchoolRegistry.SPECTOR, "spector");
+
+        // Spell
+        addSpell(SSSpellRegistry.SPECTOR_ARROW, "Spector Arrow", "");
     }
 }

@@ -7,10 +7,15 @@ import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.AnimationHolder;
+import io.redspace.ironsspellbooks.api.util.Utils;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
+
+import java.util.List;
 
 public class SpectorArrowSpell extends AbstractSpell {
     private static final ResourceLocation SPELL_ID = SpectorSpellbooks.id("spector_arrow");
@@ -32,8 +37,14 @@ public class SpectorArrowSpell extends AbstractSpell {
     @Override public DefaultConfig getDefaultConfig() { return CONFIG; }
 
     @Override public CastType getCastType() { return CastType.LONG; }
-
     @Override public AnimationHolder getCastStartAnimation() { return SpellAnimations.BOW_CHARGE_ANIMATION; }
+
+    @Override
+    public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
+        return List.of(
+                Component.translatable("ui.irons_spellbooks.damage", Utils.stringTruncation(this.getDamage(spellLevel, caster), 2))
+        );
+    }
 
     @Override
     public void onCast(Level level, int spellLevel, LivingEntity caster, CastSource source, MagicData magicData) {

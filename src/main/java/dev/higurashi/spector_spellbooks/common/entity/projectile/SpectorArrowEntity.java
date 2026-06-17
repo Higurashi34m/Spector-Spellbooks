@@ -34,7 +34,9 @@ public class SpectorArrowEntity extends AbstractMagicProjectile {
     @Override
     public void trailParticles() {
         if (!this.level().isClientSide) return;
-        this.level().addParticle(new DustParticleOptions(new Vector3f(0.0f, 0.0f, 0.0f), 1.0f), this.getX(), this.getY(), this.getZ(), 0.0, 0.0, 0.0);
+        for (int i = 0; i < 3; i++) {
+            this.level().addParticle(new DustParticleOptions(new Vector3f(0.6f, 0.6f, 0.6f), 1.0f), this.getRandomX(1.0), this.getRandomY(), this.getRandomZ(1.0), 0.0, 0.0, 0.0);
+        }
     }
 
     @Override
@@ -43,7 +45,6 @@ public class SpectorArrowEntity extends AbstractMagicProjectile {
         if (!(result.getEntity() instanceof LivingEntity target) || !(this.getOwner() instanceof LivingEntity caster)) return;
 
         DamageSources.applyDamage(target, this.getDamage(), SSSpellRegistry.SPECTOR_ARROW.get().getDamageSource(this, caster));
-
         this.discardHelper(result);
     }
 

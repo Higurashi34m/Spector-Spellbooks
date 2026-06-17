@@ -33,9 +33,9 @@ public class SSDataGenerator {
         generator.addProvider(event.includeClient(), new SSJaJpLanguageProvider(output));
 
         // Server
+        generator.addProvider(event.includeServer(), new SSDamageTypeProvider(output));
         BlockTagsProvider blockTagsProvider = new SSBlockTagsProvider(output, provider, helper);
         generator.addProvider(event.includeServer(), blockTagsProvider);
         generator.addProvider(event.includeServer(), new SSItemTagsProvider(output, provider, blockTagsProvider.contentsGetter(), helper));
-        generator.addProvider(event.includeServer(), new SSDamageTypeProvider(output));
     }
 }
