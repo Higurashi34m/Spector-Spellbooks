@@ -2,6 +2,8 @@
   "attribute.spector_spellbooks.spector_magic_resist": "亡霊魔法耐性",
   "attribute.spector_spellbooks.spector_spell_power": "亡霊魔法の威力",
   "school.spector_spellbooks.spector": "亡霊",
+  "spell.spector_spellbooks.bolt": "スペクターボルト",
+  "spell.spector_spellbooks.boltguide": "",
   "spell.spector_spellbooks.poltergeist": "ポルターガイスト",
   "spell.spector_spellbooks.poltergeistguide": "",
   "spell.spector_spellbooks.spector_arrow": "スペクターアロー",

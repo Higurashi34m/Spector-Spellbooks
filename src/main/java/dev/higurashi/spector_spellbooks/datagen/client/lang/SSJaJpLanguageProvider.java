@@ -23,6 +23,7 @@ public class SSJaJpLanguageProvider extends BaseLanguageProvider {
 
         // Spell
         addSpell(SSSpellRegistry.SPECTOR_ARROW, "スペクターアロー", "");
+        addSpell(SSSpellRegistry.SPECTOR_BOLT, "スペクターボルト", "");
         addSpell(SSSpellRegistry.POLTERGEIST, "ポルターガイスト", "");
 
         // Ui
