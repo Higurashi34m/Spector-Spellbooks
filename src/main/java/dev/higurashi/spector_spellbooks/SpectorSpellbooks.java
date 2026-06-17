@@ -1,5 +1,6 @@
 package dev.higurashi.spector_spellbooks;
 
+import dev.higurashi.daybreaklib.DaybreakLib;
 import dev.higurashi.spector_spellbooks.registry.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -18,6 +19,8 @@ public class SpectorSpellbooks {
         SSItemRegistry.register(eventBus);
         SSSchoolRegistry.register(eventBus);
         SSSpellRegistry.register(eventBus);
+
+        DaybreakLib.init(MOD_ID, eventBus);
     }
 
     public static ResourceLocation id(String path) {

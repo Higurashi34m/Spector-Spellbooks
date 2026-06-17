@@ -8,6 +8,8 @@ curios          = "5.14.1+1.20.1"
 geckoLib        = "4.8.3"
 playerAnimator  = "1.0.2-rc1+1.20"
 
+daybreaklib = "0.0.1+forge"
+
 # optimizations
 embeddium   = "5681725" # 0.3.31
 chloride    = "8064899" # 1.7.7
@@ -38,6 +40,8 @@ ironsLib        = { module = "io.redspace:irons_lib",                           
 curios          = { module = "top.theillusivec4.curios:curios-forge",            version.ref = "curios"}
 geckoLib        = { module = "software.bernie.geckolib:geckolib-forge-1.20.1",   version.ref = "geckoLib" }
 playerAnimator  = { module = "dev.kosmx.player-anim:player-animation-lib-forge", version.ref = "playerAnimator"}
+
+daybreaklib = { module = "dev.higurashi:daybreaklib-1.20.1", version.ref = "daybreaklib" }
 
 # optimizations
 embeddium   = { module = "curse.maven:embeddium-908741",       version.ref = "embeddium" }

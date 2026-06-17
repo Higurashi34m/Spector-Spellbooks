@@ -1,5 +1,10 @@
 {
   "attribute.spector_spellbooks.spector_magic_resist": "亡霊魔法耐性",
   "attribute.spector_spellbooks.spector_spell_power": "亡霊魔法の威力",
-  "school.spector_spellbooks.spector": "亡霊"
+  "school.spector_spellbooks.spector": "亡霊",
+  "spell.spector_spellbooks.poltergeist": "ポルターガイスト",
+  "spell.spector_spellbooks.poltergeistguide": "",
+  "spell.spector_spellbooks.spector_arrow": "スペクターアロー",
+  "spell.spector_spellbooks.spector_arrowguide": "",
+  "ui.spector_spellbooks.fall_damage_ratio": "落下時ダメージ倍率: %s%%"
 }

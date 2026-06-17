@@ -31,5 +31,9 @@ public class SSEnUsLanguageProvider extends BaseLanguageProvider {
 
         // Spell
         addSpell(SSSpellRegistry.SPECTOR_ARROW, "Spector Arrow", "");
+        addSpell(SSSpellRegistry.POLTERGEIST, "Poltergeist", "");
+
+        // Ui
+        addUi("fall_damage_ratio", "%s%% fall damage ratio");
     }
 }

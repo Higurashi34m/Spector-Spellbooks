@@ -18,6 +18,10 @@ public abstract class BaseLanguageProvider extends LanguageProvider {
         this.add(attribute.get().getDescriptionId(), name);
     }
 
+    protected void addUi(String key, String name) {
+        this.add("ui.spector_spellbooks." + key, name);
+    }
+
     protected void addSpell(Supplier<AbstractSpell> spell, String name, String description) {
         this.add(spell.get().getComponentId(), name);
         this.add(spell.get().getComponentId() + "guide", description);

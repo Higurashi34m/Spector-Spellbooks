@@ -139,6 +139,10 @@ dependencies {
     // Player Animator
     runtimeOnly fg.deobf(libs.playerAnimator)
 
+    // Daybreak Library
+    jarJar(libs.daybreaklib) { jarJar.ranged(it, "[0.0.1,)") }
+    implementation fg.deobf(libs.daybreaklib)
+
     if (!gradle.startParameter.taskNames.contains('runData')) {
         runtimeOnly fg.deobf(libs.bundles.optimizations)
         runtimeOnly fg.deobf(libs.bundles.utilities)

@@ -7,6 +7,9 @@
   "item.spector_spellbooks.spector_helmet": "Spector Helmet",
   "item.spector_spellbooks.spector_leggings": "Spector Leggings",
   "school.spector_spellbooks.spector": "spector",
+  "spell.spector_spellbooks.poltergeist": "Poltergeist",
+  "spell.spector_spellbooks.poltergeistguide": "",
   "spell.spector_spellbooks.spector_arrow": "Spector Arrow",
-  "spell.spector_spellbooks.spector_arrowguide": ""
+  "spell.spector_spellbooks.spector_arrowguide": "",
+  "ui.spector_spellbooks.fall_damage_ratio": "%s%% fall damage ratio"
 }

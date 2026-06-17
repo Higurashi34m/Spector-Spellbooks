@@ -2,6 +2,7 @@ package dev.higurashi.spector_spellbooks.datagen.client.lang;
 
 import dev.higurashi.spector_spellbooks.registry.SSAttributeRegistry;
 import dev.higurashi.spector_spellbooks.registry.SSSchoolRegistry;
+import dev.higurashi.spector_spellbooks.registry.SSSpellRegistry;
 import net.minecraft.data.PackOutput;
 
 import java.util.Locale;
@@ -19,5 +20,12 @@ public class SSJaJpLanguageProvider extends BaseLanguageProvider {
 
         // School
         addSchool(SSSchoolRegistry.SPECTOR, "亡霊");
+
+        // Spell
+        addSpell(SSSpellRegistry.SPECTOR_ARROW, "スペクターアロー", "");
+        addSpell(SSSpellRegistry.POLTERGEIST, "ポルターガイスト", "");
+
+        // Ui
+        addUi("fall_damage_ratio", "落下時ダメージ倍率: %s%%");
     }
 }
