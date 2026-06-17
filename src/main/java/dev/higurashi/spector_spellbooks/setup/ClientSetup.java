@@ -19,6 +19,7 @@ public class ClientSetup {
     public static void onRegisterEntityRenderer(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(SSEntityRegistry.SPECTOR_ARROW.get(), SpectorArrowRenderer::new);
         event.registerEntityRenderer(SSEntityRegistry.SPECTOR_BOLT.get(), SpectorBoltRenderer::new);
+        event.registerEntityRenderer(SSEntityRegistry.RAY_OF_SPECTOR.get(),  RayOfSpectorRenderer::new);
     }
 
     @SubscribeEvent

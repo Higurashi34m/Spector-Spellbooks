@@ -6,6 +6,8 @@
   "spell.spector_spellbooks.boltguide": "",
   "spell.spector_spellbooks.poltergeist": "ポルターガイスト",
   "spell.spector_spellbooks.poltergeistguide": "",
+  "spell.spector_spellbooks.ray_of_spector": "スペクターレイ",
+  "spell.spector_spellbooks.ray_of_spectorguide": "",
   "spell.spector_spellbooks.spector_arrow": "スペクターアロー",
   "spell.spector_spellbooks.spector_arrowguide": "",
   "ui.spector_spellbooks.fall_damage_ratio": "落下時ダメージ倍率: %s%%"

@@ -19,6 +19,7 @@ public class SSSpellRegistry {
     public static final RegistryObject<AbstractSpell> SPECTOR_ARROW = register(new SpectorArrowSpell());
     public static final RegistryObject<AbstractSpell> SPECTOR_BOLT = register(new SpectorBoltSpell());
     public static final RegistryObject<AbstractSpell> POLTERGEIST = register(new PoltergeistSpell());
+    public static final RegistryObject<AbstractSpell> RAY_OF_SPECTOR = register(new RayOfSpectorSpell());
 
     private static RegistryObject<AbstractSpell> register(AbstractSpell spell) {
         return SPELLS.register(spell.getSpellResource().getPath(), () -> spell);

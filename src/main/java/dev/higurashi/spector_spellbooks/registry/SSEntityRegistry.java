@@ -1,6 +1,7 @@
 package dev.higurashi.spector_spellbooks.registry;
 
 import dev.higurashi.spector_spellbooks.SpectorSpellbooks;
+import dev.higurashi.spector_spellbooks.common.entity.projectile.RayOfSpectorEntity;
 import dev.higurashi.spector_spellbooks.common.entity.projectile.SpectorArrowEntity;
 import dev.higurashi.spector_spellbooks.common.entity.projectile.SpectorBoltEntity;
 import net.minecraft.world.entity.EntityType;
@@ -18,6 +19,10 @@ public class SSEntityRegistry {
             .sized(0.5f, 0.5f)
             .fireImmune()
             .build(SpectorSpellbooks.id("spector_arrow").toString()));
+
+    public static final RegistryObject<EntityType<RayOfSpectorEntity>> RAY_OF_SPECTOR = ENTITIES.register("ray_of_spector", () -> EntityType.Builder.<RayOfSpectorEntity>of(RayOfSpectorEntity::new, MobCategory.MISC)
+            .sized(0.5f, 0.5f)
+            .build(SpectorSpellbooks.id("ray_of_spector").toString()));
 
     public static final RegistryObject<EntityType<SpectorBoltEntity>> SPECTOR_BOLT = ENTITIES.register("spector_bolt", () -> EntityType.Builder.<SpectorBoltEntity>of(SpectorBoltEntity::new, MobCategory.MISC)
             .sized(0.5f, 0.5f)

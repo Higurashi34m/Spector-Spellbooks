@@ -32,6 +32,7 @@ public class SSEnUsLanguageProvider extends BaseLanguageProvider {
         // Spell
         addSpell(SSSpellRegistry.SPECTOR_ARROW, "Spector Arrow", "");
         addSpell(SSSpellRegistry.SPECTOR_BOLT, "Spector Bolt", "");
+        addSpell(SSSpellRegistry.RAY_OF_SPECTOR, "Ray of Spector", "");
         addSpell(SSSpellRegistry.POLTERGEIST, "Poltergeist", "");
 
         // Ui
