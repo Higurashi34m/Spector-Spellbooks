@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "spector_spellbooks:item/spector_scythe_hand"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "minecraft:item/handheld",
+      "textures": {
+        "layer0": "spector_spellbooks:item/spector_scythe_gui"
+      }
+    }
+  }
+}

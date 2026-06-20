@@ -8,7 +8,9 @@
     "LivingEntityMixin",
     "WallLockOnMixin"
   ],
-  "client": [],
+  "client": [
+    "client.ScreenEffectRendererMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   },

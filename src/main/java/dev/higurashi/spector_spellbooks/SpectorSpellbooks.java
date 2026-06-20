@@ -17,6 +17,7 @@ public class SpectorSpellbooks {
         SSAttributeRegistry.register(eventBus);
         SSEntityRegistry.register(eventBus);
         SSItemRegistry.register(eventBus);
+        SSParticleRegistry.register(eventBus);
         SSSchoolRegistry.register(eventBus);
         SSSpellRegistry.register(eventBus);
 

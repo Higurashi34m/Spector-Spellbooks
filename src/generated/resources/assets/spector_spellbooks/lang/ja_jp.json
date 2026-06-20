@@ -1,6 +1,7 @@
 {
   "attribute.spector_spellbooks.spector_magic_resist": "亡霊魔法耐性",
   "attribute.spector_spellbooks.spector_spell_power": "亡霊魔法の威力",
+  "item.spector_spellbooks.spector_spell_book": "亡霊の古書",
   "school.spector_spellbooks.spector": "亡霊",
   "spell.spector_spellbooks.bolt": "スペクターボルト",
   "spell.spector_spellbooks.boltguide": "",

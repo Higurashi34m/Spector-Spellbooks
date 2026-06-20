@@ -21,10 +21,14 @@ public class SSEnUsLanguageProvider extends BaseLanguageProvider {
 
         // Item
         addItem(SSItemRegistry.SPECTOR_ESSENCE, "Spector Essence");
+        addItem(SSItemRegistry.SPECTOR_LUMP_INGOT, "Spector Lump Ingot");
+        addItem(SSItemRegistry.SPECTOR_RUNE,  "Spector Rune");
         addItem(SSItemRegistry.SPECTOR_HELMET, "Spector Helmet");
         addItem(SSItemRegistry.SPECTOR_CHESTPLATE, "Spector Chestplate");
         addItem(SSItemRegistry.SPECTOR_LEGGINGS, "Spector Leggings");
         addItem(SSItemRegistry.SPECTOR_BOOTS, "Spector Boots");
+        addItem(SSItemRegistry.SPECTOR_SCYTHE,  "Spector Scythe");
+        addItem(SSItemRegistry.SPECTOR_SPELLBOOK, "Spector Spellbook");
 
         // School
         addSchool(SSSchoolRegistry.SPECTOR, "spector");
@@ -32,7 +36,10 @@ public class SSEnUsLanguageProvider extends BaseLanguageProvider {
         // Spell
         addSpell(SSSpellRegistry.SPECTOR_ARROW, "Spector Arrow", "");
         addSpell(SSSpellRegistry.SPECTOR_BOLT, "Spector Bolt", "");
+        addSpell(SSSpellRegistry.SPECTOR_SLASH, "Spector Slash", "");
+        addSpell(SSSpellRegistry.SPECTOR_BREATH, "Spector Breath", "");
         addSpell(SSSpellRegistry.RAY_OF_SPECTOR, "Ray of Spector", "");
+        addSpell(SSSpellRegistry.SHIFT, "Shift", "");
         addSpell(SSSpellRegistry.POLTERGEIST, "Poltergeist", "");
 
         // Ui

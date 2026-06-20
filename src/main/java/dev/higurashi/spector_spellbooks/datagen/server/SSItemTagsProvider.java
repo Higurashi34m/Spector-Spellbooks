@@ -23,5 +23,6 @@ public class SSItemTagsProvider extends ItemTagsProvider {
     protected void addTags(@NotNull HolderLookup.Provider provider) {
         this.tag(SSTagRegistry.SPECTOR_FOCUS).add(SSItemRegistry.SPECTOR_ESSENCE.get());
         this.tag(ModTags.SCHOOL_FOCUS).addTag(SSTagRegistry.SPECTOR_FOCUS);
+        this.tag(ModTags.SPELLBOOK_CURIO).add(SSItemRegistry.SPECTOR_SPELLBOOK.get());
     }
 }

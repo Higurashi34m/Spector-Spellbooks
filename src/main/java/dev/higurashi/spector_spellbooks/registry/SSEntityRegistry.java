@@ -1,9 +1,7 @@
 package dev.higurashi.spector_spellbooks.registry;
 
 import dev.higurashi.spector_spellbooks.SpectorSpellbooks;
-import dev.higurashi.spector_spellbooks.common.entity.projectile.RayOfSpectorEntity;
-import dev.higurashi.spector_spellbooks.common.entity.projectile.SpectorArrowEntity;
-import dev.higurashi.spector_spellbooks.common.entity.projectile.SpectorBoltEntity;
+import dev.higurashi.spector_spellbooks.common.entity.projectile.*;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -28,4 +26,13 @@ public class SSEntityRegistry {
             .sized(0.5f, 0.5f)
             .clientTrackingRange(64)
             .build(SpectorSpellbooks.id("spector_bolt").toString()));
+
+    public static final RegistryObject<EntityType<SpectorSlashEntity>> SPECTOR_SLASH = ENTITIES.register("spector_slash", () -> EntityType.Builder.<SpectorSlashEntity>of(SpectorSlashEntity::new, MobCategory.MISC)
+            .sized(2.0f, 0.5f)
+            .clientTrackingRange(64)
+            .build(SpectorSpellbooks.id("spector_slash").toString()));
+
+    public static final RegistryObject<EntityType<SpectorBreathEntity>> SPECTOR_BREATH = ENTITIES.register("spector_breath", () -> EntityType.Builder.<SpectorBreathEntity>of(SpectorBreathEntity::new, MobCategory.MISC)
+            .sized(1.0f, 1.0f)
+            .build(SpectorSpellbooks.id("spector_breath").toString()));
 }

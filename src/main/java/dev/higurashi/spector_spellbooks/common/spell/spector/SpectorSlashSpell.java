@@ -1,7 +1,7 @@
 package dev.higurashi.spector_spellbooks.common.spell.spector;
 
 import dev.higurashi.spector_spellbooks.SpectorSpellbooks;
-import dev.higurashi.spector_spellbooks.common.entity.projectile.SpectorArrowEntity;
+import dev.higurashi.spector_spellbooks.common.entity.projectile.SpectorSlashEntity;
 import dev.higurashi.spector_spellbooks.registry.SSSchoolRegistry;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
@@ -17,27 +17,26 @@ import net.minecraft.world.phys.Vec3;
 
 import java.util.List;
 
-public class SpectorArrowSpell extends AbstractSpell {
-    private static final ResourceLocation SPELL_ID = SpectorSpellbooks.id("spector_arrow");
+public class SpectorSlashSpell extends AbstractSpell {
+    private static final ResourceLocation SPELL_ID = SpectorSpellbooks.id("spector_slash");
     private static final DefaultConfig CONFIG = new DefaultConfig()
             .setSchoolResource(SSSchoolRegistry.SPECTOR_RESOURCE)
-            .setMinRarity(SpellRarity.COMMON)
-            .setCooldownSeconds(10)
-            .setMaxLevel(10).build();
+            .setMinRarity(SpellRarity.RARE)
+            .setCooldownSeconds(6)
+            .setMaxLevel(7).build();
 
-    public SpectorArrowSpell() {
-        this.castTime = 30;
-        this.baseManaCost = 40;
-        this.baseSpellPower = 6;
-        this.manaCostPerLevel = 5;
+    public SpectorSlashSpell() {
+        this.baseManaCost = 60;
+        this.baseSpellPower = 4;
+        this.manaCostPerLevel = 10;
         this.spellPowerPerLevel = 2;
     }
 
     @Override public ResourceLocation getSpellResource() { return SPELL_ID; }
     @Override public DefaultConfig getDefaultConfig() { return CONFIG; }
 
-    @Override public CastType getCastType() { return CastType.LONG; }
-    @Override public AnimationHolder getCastStartAnimation() { return SpellAnimations.BOW_CHARGE_ANIMATION; }
+    @Override public CastType getCastType() { return CastType.INSTANT; }
+    @Override public AnimationHolder getCastFinishAnimation() { return SpellAnimations.SLASH_ANIMATION; }
 
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
@@ -51,7 +50,7 @@ public class SpectorArrowSpell extends AbstractSpell {
 
         Vec3 spawnPos = caster.getEyePosition().add(caster.getForward().scale(0.75));
 
-        SpectorArrowEntity arrow = new SpectorArrowEntity(level, caster, spawnPos, damage);
+        SpectorSlashEntity arrow = new SpectorSlashEntity(level, caster, spawnPos, damage);
         arrow.shoot(caster.getLookAngle());
         level.addFreshEntity(arrow);
 

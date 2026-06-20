@@ -6,6 +6,9 @@
   "item.spector_spellbooks.spector_essence": "Spector Essence",
   "item.spector_spellbooks.spector_helmet": "Spector Helmet",
   "item.spector_spellbooks.spector_leggings": "Spector Leggings",
+  "item.spector_spellbooks.spector_lump_ingot": "Spector Lump Ingot",
+  "item.spector_spellbooks.spector_rune": "Spector Rune",
+  "item.spector_spellbooks.spector_scythe": "Spector Scythe",
   "school.spector_spellbooks.spector": "spector",
   "spell.spector_spellbooks.bolt": "Spector Bolt",
   "spell.spector_spellbooks.boltguide": "",
@@ -15,5 +18,9 @@
   "spell.spector_spellbooks.ray_of_spectorguide": "",
   "spell.spector_spellbooks.spector_arrow": "Spector Arrow",
   "spell.spector_spellbooks.spector_arrowguide": "",
+  "spell.spector_spellbooks.spector_breath": "Spector Breath",
+  "spell.spector_spellbooks.spector_breathguide": "",
+  "spell.spector_spellbooks.spector_slash": "Spector Slash",
+  "spell.spector_spellbooks.spector_slashguide": "",
   "ui.spector_spellbooks.fall_damage_ratio": "%s%% fall damage ratio"
 }

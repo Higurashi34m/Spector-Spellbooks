@@ -1,6 +1,7 @@
 package dev.higurashi.spector_spellbooks.datagen.client.lang;
 
 import dev.higurashi.spector_spellbooks.registry.SSAttributeRegistry;
+import dev.higurashi.spector_spellbooks.registry.SSItemRegistry;
 import dev.higurashi.spector_spellbooks.registry.SSSchoolRegistry;
 import dev.higurashi.spector_spellbooks.registry.SSSpellRegistry;
 import net.minecraft.data.PackOutput;
@@ -18,6 +19,9 @@ public class SSJaJpLanguageProvider extends BaseLanguageProvider {
         addAttribute(SSAttributeRegistry.SPECTOR_SPELL_POWER, "亡霊魔法の威力");
         addAttribute(SSAttributeRegistry.SPECTOR_MAGIC_RESIST, "亡霊魔法耐性");
 
+        // Item
+        addItem(SSItemRegistry.SPECTOR_SPELLBOOK, "亡霊の古書");
+
         // School
         addSchool(SSSchoolRegistry.SPECTOR, "亡霊");
 
@@ -25,6 +29,9 @@ public class SSJaJpLanguageProvider extends BaseLanguageProvider {
         addSpell(SSSpellRegistry.SPECTOR_ARROW, "スペクターアロー", "");
         addSpell(SSSpellRegistry.SPECTOR_BOLT, "スペクターボルト", "");
         addSpell(SSSpellRegistry.RAY_OF_SPECTOR, "スペクターレイ", "");
+        addSpell(SSSpellRegistry.SPECTOR_SLASH, "スペクタースラッシュ", "");
+        addSpell(SSSpellRegistry.SPECTOR_BREATH, "スペクターブレス", "");
+        addSpell(SSSpellRegistry.SHIFT, "シフト", "");
         addSpell(SSSpellRegistry.POLTERGEIST, "ポルターガイスト", "");
 
         // Ui
