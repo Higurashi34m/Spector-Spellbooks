@@ -4,10 +4,7 @@ import dev.higurashi.spector_spellbooks.SpectorSpellbooks;
 import dev.higurashi.spector_spellbooks.datagen.client.SSItemModelProvider;
 import dev.higurashi.spector_spellbooks.datagen.client.lang.SSEnUsLanguageProvider;
 import dev.higurashi.spector_spellbooks.datagen.client.lang.SSJaJpLanguageProvider;
-import dev.higurashi.spector_spellbooks.datagen.server.SSBlockTagsProvider;
-import dev.higurashi.spector_spellbooks.datagen.server.SSDamageTypeProvider;
-import dev.higurashi.spector_spellbooks.datagen.server.SSItemTagsProvider;
-import dev.higurashi.spector_spellbooks.datagen.server.SSRecipeProvider;
+import dev.higurashi.spector_spellbooks.datagen.server.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -34,6 +31,7 @@ public class SSDataGenerator {
         generator.addProvider(event.includeClient(), new SSJaJpLanguageProvider(output));
 
         // Server
+        generator.addProvider(event.includeServer(), new SSAdvancementProvider(output, provider, helper));
         generator.addProvider(event.includeServer(), new SSDamageTypeProvider(output));
         BlockTagsProvider blockTagsProvider = new SSBlockTagsProvider(output, provider, helper);
         generator.addProvider(event.includeServer(), blockTagsProvider);

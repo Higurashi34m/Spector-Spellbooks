@@ -31,7 +31,7 @@ public class WraithGripEffect extends MobEffect {
         MobEffectInstance effectInstance = entity.getEffect(this);
         if (effectInstance == null) return;
 
-        int elapsedTicks = 200 - effectInstance.getDuration();
+        int elapsedTicks = 2000 - effectInstance.getDuration();
 
         if (elapsedTicks > 5 && entity.onGround()) {
             float elapsedSeconds = elapsedTicks / 20.0f;

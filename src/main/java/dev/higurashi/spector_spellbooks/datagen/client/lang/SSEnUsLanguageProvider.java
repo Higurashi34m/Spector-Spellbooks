@@ -12,6 +12,10 @@ public class SSEnUsLanguageProvider extends BaseLanguageProvider {
 
     @Override
     protected void addTranslations() {
+        // Advancement
+        add("advancement.spector_spellbooks.spell_book_spector.title", "Portable Stigmatized Property");
+        add("advancement.spector_spellbooks.spell_book_spector.description", "Craft The Ghostly Book");
+
         // Attribute
         addAttribute(SSAttributeRegistry.SPECTOR_SPELL_POWER, "Spector Spell Power");
         addAttribute(SSAttributeRegistry.SPECTOR_MAGIC_RESIST, "Spector Magic Resistance");
@@ -41,13 +45,21 @@ public class SSEnUsLanguageProvider extends BaseLanguageProvider {
         addSchool(SSSchoolRegistry.SPECTOR, "spector");
 
         // Spell
-        addSpell(SSSpellRegistry.SPECTOR_ARROW, "Spector Arrow", "");
-        addSpell(SSSpellRegistry.SPECTOR_BOLT, "Spector Bolt", "");
-        addSpell(SSSpellRegistry.SPECTOR_SLASH, "Spector Slash", "");
-        addSpell(SSSpellRegistry.SPECTOR_BREATH, "Spector Breath", "");
-        addSpell(SSSpellRegistry.RAY_OF_SPECTOR, "Ray of Spector", "");
-        addSpell(SSSpellRegistry.SHIFT, "Shift", "");
-        addSpell(SSSpellRegistry.POLTERGEIST, "Poltergeist", "");
+        addSpell(SSSpellRegistry.SPECTOR_ARROW, "Spector Arrow", "Hold to charge a piercing possessed arrow. This arrow can travel through blocks");
+        addSpell(SSSpellRegistry.SPECTOR_BOLT, "Spector Bolt", "Fire a possessed by spector bolt that can travel through blocks. Creatures hit will glow, allowing you to lock on to them through walls");
+        addSpell(SSSpellRegistry.SPECTOR_SLASH, "Spector Slash", "Slash forward to send out a piercing possessed by spector slash. This slash can travel through blocks");
+        addSpell(SSSpellRegistry.SPECTOR_BREATH, "Spector Breath", "Spew forth a cone of chilling breath, damaging creatures in its reach. This breath can pass through blocks");
+        addSpell(SSSpellRegistry.RAY_OF_SPECTOR, "Ray of Spector", "Fire a beam of possessed by spector, can pass through blocks");
+        addSpell(SSSpellRegistry.SHIFT, "Shift", "Cast to inflict yourself with effect, an effect that makes you able travel through blocks and creative flying. When travel through block, it is impossible to see through to the ground");
+        addSpell(SSSpellRegistry.POLTERGEIST, "Poltergeist", "Launches creatures within range into the air, and launches in the direction to caster look side. After that, inflict slow falling to creatures, and when they land, hurt based on the duration of the fall");
+
+        // Death Attack
+        add("death.attack.spector_spellbooks.spector_arrow", "%1$s was penetrated by %2$s's arrow");
+        add("death.attack.spector_spellbooks.spector_bolt", "%1$s was led to the grave by %2$s");
+        add("death.attack.spector_spellbooks.ray_of_spector", "%1$s was sent to the afterlife by %2$s's ray of spector");
+        add("death.attack.spector_spellbooks.spector_slash", "%1$s's life was severed by %2$s's spector");
+        add("death.attack.spector_spellbooks.spector_breath", "%1$s was possessed by %2$s's chilling breath");
+        add("death.attack.spector_spellbooks.poltergeist", "%1$s was dragged around by %2$s's poltergeist");
 
         // Ui
         addUi("fall_damage_ratio", "%s%% fall damage ratio");

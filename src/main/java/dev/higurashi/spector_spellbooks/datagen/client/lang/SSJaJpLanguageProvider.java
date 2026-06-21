@@ -12,6 +12,10 @@ public class SSJaJpLanguageProvider extends BaseLanguageProvider {
 
     @Override
     protected void addTranslations() {
+        // Advancement
+        add("advancement.spector_spellbooks.spell_book_spector.title", "携帯型事故物件");
+        add("advancement.spector_spellbooks.spell_book_spector.description", "亡霊の古書を入手する");
+
         // Attribute
         addAttribute(SSAttributeRegistry.SPECTOR_SPELL_POWER, "亡霊魔法の威力");
         addAttribute(SSAttributeRegistry.SPECTOR_MAGIC_RESIST, "亡霊魔法耐性");
@@ -38,13 +42,21 @@ public class SSJaJpLanguageProvider extends BaseLanguageProvider {
         addSchool(SSSchoolRegistry.SPECTOR, "亡霊");
 
         // Spell
-        addSpell(SSSpellRegistry.SPECTOR_ARROW, "スペクターアロー", "");
-        addSpell(SSSpellRegistry.SPECTOR_BOLT, "スペクターボルト", "");
-        addSpell(SSSpellRegistry.RAY_OF_SPECTOR, "スペクターレイ", "");
-        addSpell(SSSpellRegistry.SPECTOR_SLASH, "スペクタースラッシュ", "");
-        addSpell(SSSpellRegistry.SPECTOR_BREATH, "スペクターブレス", "");
-        addSpell(SSSpellRegistry.SHIFT, "シフト", "");
-        addSpell(SSSpellRegistry.POLTERGEIST, "ポルターガイスト", "");
+        addSpell(SSSpellRegistry.SPECTOR_ARROW, "スペクターアロー", "壁や敵を貫通する亡霊の矢を放つ。重力の影響は受ける");
+        addSpell(SSSpellRegistry.SPECTOR_BOLT, "スペクターボルト", "壁を貫通する亡霊が憑いた弾を発射する。命中したクリーチャーは一定時間発光し、壁越しでもロックオンできるようになる");
+        addSpell(SSSpellRegistry.RAY_OF_SPECTOR, "スペクターレイ", "壁を貫通する亡霊が憑いたビームを発射する");
+        addSpell(SSSpellRegistry.SPECTOR_SLASH, "スペクタースラッシュ", "前方に斬りつけて壁や敵を貫通する亡霊が憑いた斬撃を放つ");
+        addSpell(SSSpellRegistry.SPECTOR_BREATH, "スペクターブレス", "継続的に背筋の凍る息を前方に放つ。この息は壁を貫通する");
+        addSpell(SSSpellRegistry.SHIFT, "シフト", "唱えると、一時的にクリエイティブ飛行、壁貫通をすることができるようになるバフを自分自身につける。壁貫通時、地面の透視は不可能");
+        addSpell(SSSpellRegistry.POLTERGEIST, "ポルターガイスト", "亡霊の力で範囲内のターゲットを上空に打ち上げた後、詠唱者が向いている方向に向けて飛ばす。その後飛ばされた相手に低速落下をつけ、地面に着地した時、落下時間に応じたダメージを与える");
+
+        // Death Attack
+        add("death.attack.spector_spellbooks.spector_arrow", "%1$sは %2$sの矢で貫かれた");
+        add("death.attack.spector_spellbooks.spector_bolt", "%1$sは %2$sによって墓に導かれた");
+        add("death.attack.spector_spellbooks.ray_of_spector", "%1$sは %2$sの亡霊の光線によってあの世に送られた");
+        add("death.attack.spector_spellbooks.spector_slash", "%1$sの命は %2$sの亡霊によって断ち切られた");
+        add("death.attack.spector_spellbooks.spector_breath", "%1$sは %2$sの背筋の凍るような息によって憑かれた");
+        add("death.attack.spector_spellbooks.poltergeist", "%1$sは %2$sのポルターガイストによって引きずり回された");
 
         // Ui
         addUi("fall_damage_ratio", "落下時ダメージ倍率: %s%%");

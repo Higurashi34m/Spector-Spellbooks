@@ -1,0 +1,39 @@
+{
+  "parent": "irons_spellbooks:irons_spellbooks/spell_book_rotten",
+  "criteria": {
+    "has_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "spector_spellbooks:spector_spell_book"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.spector_spellbooks.spell_book_spector.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "spector_spellbooks:spector_spell_book",
+      "nbt": "{\"irons_spellbooks:spell_container\":{data:[],maxSpells:10,mustEquip:1b,spellWheel:1b}}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.spector_spellbooks.spell_book_spector.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

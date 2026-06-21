@@ -46,8 +46,8 @@ public class PoltergeistEffect extends MobEffect {
 
             MagicManager.spawnParticles(level, new BlastwaveParticleOptions(new Vector3f(0.6f, 0.6f, 0.6f), entity.getBbWidth() * 4.0f), entity.getX(), entity.getY(), entity.getZ(), 1, 0.0, 0.0, 0.0, 0.0, false);
 
-            entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 200));
-            SSEffectRegistry.WRAITH_GRIP.addAndTrackEffect(caster, entity, 200, amplifier);
+            entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 2000));
+            SSEffectRegistry.WRAITH_GRIP.addAndTrackEffect(caster, entity, 2000, amplifier);
         }
     }
 
