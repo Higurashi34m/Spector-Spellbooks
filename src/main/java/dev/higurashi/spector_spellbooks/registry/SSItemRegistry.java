@@ -1,14 +1,12 @@
 package dev.higurashi.spector_spellbooks.registry;
 
 import dev.higurashi.spector_spellbooks.SpectorSpellbooks;
+import dev.higurashi.spector_spellbooks.common.item.SSItemRarity;
 import dev.higurashi.spector_spellbooks.common.item.SpectorArmor;
-import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
+import dev.higurashi.spector_spellbooks.common.item.weapon.SpectorScytheItem;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
-import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.item.SpellBook;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
-import io.redspace.ironsspellbooks.item.weapons.ExtendedWeaponTier;
-import io.redspace.ironsspellbooks.render.CinderousRarity;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
@@ -33,7 +31,7 @@ public class SSItemRegistry {
     public static final RegistryObject<Item> SPECTOR_BOOTS = ITEMS.register("spector_boots", () -> new SpectorArmor(ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1)));
 
     // Weapon
-    public static final RegistryObject<Item> SPECTOR_SCYTHE = ITEMS.register("spector_scythe", () -> new MagicSwordItem(ExtendedWeaponTier.HELLRAZOR, new Item.Properties().rarity(CinderousRarity.CINDEROUS_RARITY).fireResistant(), SpellDataRegistryHolder.of(new SpellDataRegistryHolder(SSSpellRegistry.SPECTOR_SLASH, 7))));
+    public static final RegistryObject<Item> SPECTOR_SCYTHE = ITEMS.register("spector_scythe", () -> new SpectorScytheItem(new Item.Properties().rarity(SSItemRarity.SPECTOR).fireResistant()));
 
     // Spellbook
     public static final RegistryObject<Item> SPECTOR_SPELLBOOK = ITEMS.register("spector_spell_book", () -> new SpellBook(10, new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON).fireResistant())
