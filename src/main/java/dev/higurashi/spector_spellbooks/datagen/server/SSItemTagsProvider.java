@@ -26,5 +26,6 @@ public class SSItemTagsProvider extends ItemTagsProvider {
         this.tag(ModTags.SCHOOL_FOCUS).addTag(SSTagRegistry.SPECTOR_FOCUS);
         this.tag(ModTags.SPELLBOOK_CURIO).add(SSItemRegistry.SPECTOR_SPELLBOOK.get());
         this.tag(Tags.Items.INGOTS).add(SSItemRegistry.SPECTOR_LUMP_INGOT.get());
+        this.tag(ModTags.INSCRIBED_RUNES).add(SSItemRegistry.SPECTOR_RUNE.get());
     }
 }

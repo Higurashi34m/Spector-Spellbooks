@@ -25,8 +25,14 @@ public class SSJaJpLanguageProvider extends BaseLanguageProvider {
         // Item
         addItem(SSItemRegistry.SPECTOR_SPELLBOOK, "亡霊の古書");
         addItem(SSItemRegistry.SPECTOR_ESSENCE, "亡霊の怨嗟");
+        addItem(SSItemRegistry.SPECTOR_RUNE, "亡霊のルーン");
         addItem(SSItemRegistry.SPECTOR_LUMP_INGOT, "怨蹉の魂塊");
         addItem(SSItemRegistry.SPECTOR_SCYTHE, "亡霊の大鎌");
+        addItem(SSItemRegistry.SPECTOR_UPGRADE_ORB, "亡霊のアップグレードオーブ");
+        addItem(SSItemRegistry.SPECTOR_HELMET, "亡霊のぼろきれのヘルメット");
+        addItem(SSItemRegistry.SPECTOR_CHESTPLATE, "亡霊のぼろきれのチェストプレート");
+        addItem(SSItemRegistry.SPECTOR_LEGGINGS, "亡霊のぼろきれのレギンス");
+        addItem(SSItemRegistry.SPECTOR_BOOTS, "亡霊のぼろきれのブーツ");
 
         // School
         addSchool(SSSchoolRegistry.SPECTOR, "亡霊");

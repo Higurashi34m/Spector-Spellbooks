@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "irons_spellbooks:rotten_spell_book"
+    },
+    "C": {
+      "item": "irons_spellbooks:magic_cloth"
+    },
+    "E": {
+      "item": "spector_spellbooks:spector_essence"
+    },
+    "I": {
+      "item": "minecraft:chain"
+    },
+    "Q": {
+      "item": "minecraft:quartz"
+    },
+    "S": {
+      "item": "minecraft:soul_soil"
+    }
+  },
+  "pattern": [
+    " EC",
+    "SBQ",
+    "CI "
+  ],
+  "result": {
+    "item": "spector_spellbooks:spector_spell_book"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "spector_spellbooks:spector_essence"
+    },
+    "R": {
+      "item": "irons_spellbooks:blank_rune"
+    }
+  },
+  "pattern": [
+    "EEE",
+    "ERE",
+    "EEE"
+  ],
+  "result": {
+    "item": "spector_spellbooks:spector_rune"
+  },
+  "show_notification": true
+}

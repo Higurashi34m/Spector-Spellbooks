@@ -1,0 +1,9 @@
+{
+  "amount": 0.05,
+  "attribute": "spector_spellbooks:spector_spell_power",
+  "containerItem": {
+    "Count": 1,
+    "id": "spector_spellbooks:spector_upgrade_orb"
+  },
+  "operation": "MULTIPLY_BASE"
+}

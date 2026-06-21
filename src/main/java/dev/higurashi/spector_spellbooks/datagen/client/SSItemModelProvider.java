@@ -16,7 +16,9 @@ public class SSItemModelProvider extends ItemModelProvider {
         basicItem(SSItemRegistry.SPECTOR_ESSENCE.get());
         basicItem(SSItemRegistry.SPECTOR_LUMP_INGOT.get());
         basicItem(SSItemRegistry.SPECTOR_RUNE.get());
+        basicItem(SSItemRegistry.SPECTOR_UPGRADE_ORB.get());
         basicItem(SpectorSpellbooks.id("scroll_spector"));
+        basicItem(SpectorSpellbooks.id("affinity_ring_spector"));
 
         basicItem(SSItemRegistry.SPECTOR_HELMET.get());
         basicItem(SSItemRegistry.SPECTOR_CHESTPLATE.get());

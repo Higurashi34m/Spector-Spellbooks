@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "tag": "irons_spellbooks:wizard_base_chestplate"
+    },
+    {
+      "item": "spector_spellbooks:spector_rune"
+    },
+    {
+      "item": "irons_spellbooks:arcane_essence"
+    }
+  ],
+  "result": {
+    "item": "spector_spellbooks:spector_chestplate"
+  }
+}

@@ -15,6 +15,7 @@ public class SpectorSpellbooks {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         SSAttributeRegistry.register(eventBus);
+        SSCreativeTabRegistry.register(eventBus);
         SSEntityRegistry.register(eventBus);
         SSItemRegistry.register(eventBus);
         SSParticleRegistry.register(eventBus);

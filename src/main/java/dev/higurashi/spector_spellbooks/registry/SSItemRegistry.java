@@ -6,6 +6,7 @@ import dev.higurashi.spector_spellbooks.common.item.SpectorArmor;
 import dev.higurashi.spector_spellbooks.common.item.weapon.SpectorScytheItem;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.item.SpellBook;
+import io.redspace.ironsspellbooks.item.UpgradeOrbItem;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.ArmorItem;
@@ -23,6 +24,7 @@ public class SSItemRegistry {
     public static final RegistryObject<Item> SPECTOR_ESSENCE = ITEMS.register("spector_essence", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SPECTOR_LUMP_INGOT = ITEMS.register("spector_lump_ingot", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SPECTOR_RUNE = ITEMS.register("spector_rune", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SPECTOR_UPGRADE_ORB = ITEMS.register("spector_upgrade_orb", () -> new UpgradeOrbItem(new Item.Properties(), SSUpgradeOrbRegistry.SPECTOR_SPELL_POWER));
 
     // Armor
     public static final RegistryObject<Item> SPECTOR_HELMET = ITEMS.register("spector_helmet", () -> new SpectorArmor(ArmorItem.Type.HELMET, new Item.Properties().stacksTo(1)));

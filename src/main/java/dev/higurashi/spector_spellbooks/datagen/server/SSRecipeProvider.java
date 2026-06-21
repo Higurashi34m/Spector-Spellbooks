@@ -3,6 +3,7 @@ package dev.higurashi.spector_spellbooks.datagen.server;
 import dev.higurashi.spector_spellbooks.SpectorSpellbooks;
 import dev.higurashi.spector_spellbooks.registry.SSItemRegistry;
 import io.redspace.ironsspellbooks.registries.ItemRegistry;
+import io.redspace.ironsspellbooks.util.ModTags;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
@@ -37,6 +38,15 @@ public class SSRecipeProvider extends RecipeProvider {
                 .define('M', ItemRegistry.MITHRIL_INGOT.get())
                 .save(writer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, SSItemRegistry.SPECTOR_RUNE.get())
+                .pattern("EEE")
+                .pattern("ERE")
+                .pattern("EEE")
+                .unlockedBy("has_rune", has(ItemRegistry.BLANK_RUNE.get()))
+                .define('E', SSItemRegistry.SPECTOR_ESSENCE.get())
+                .define('R', ItemRegistry.BLANK_RUNE.get())
+                .save(writer);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, SSItemRegistry.SPECTOR_SPELLBOOK.get())
                 .pattern(" EC")
                 .pattern("SBQ")
@@ -53,5 +63,33 @@ public class SSRecipeProvider extends RecipeProvider {
         SmithingTransformRecipeBuilder.smithing(Ingredient.of(ItemRegistry.TIMELESS_SLURRY.get()), Ingredient.of(ItemRegistry.DECREPIT_SCYTHE.get()), Ingredient.of(SSItemRegistry.SPECTOR_LUMP_INGOT.get()), RecipeCategory.COMBAT, SSItemRegistry.SPECTOR_SCYTHE.get())
                 .unlocks("has_scythe", has(ItemRegistry.DECREPIT_SCYTHE.get()))
                 .save(writer, SpectorSpellbooks.id("spector_scythe_upgrade"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.COMBAT, SSItemRegistry.SPECTOR_HELMET.get())
+                .requires(ModTags.BASE_WIZARD_HELMET)
+                .requires(SSItemRegistry.SPECTOR_RUNE.get())
+                .requires(ItemRegistry.ARCANE_ESSENCE.get())
+                .unlockedBy("has_wizard",  has(ModTags.BASE_WIZARD_HELMET))
+                .save(writer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.COMBAT, SSItemRegistry.SPECTOR_CHESTPLATE.get())
+                .requires(ModTags.BASE_WIZARD_CHESTPLATE)
+                .requires(SSItemRegistry.SPECTOR_RUNE.get())
+                .requires(ItemRegistry.ARCANE_ESSENCE.get())
+                .unlockedBy("has_wizard",  has(ModTags.BASE_WIZARD_CHESTPLATE))
+                .save(writer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.COMBAT, SSItemRegistry.SPECTOR_LEGGINGS.get())
+                .requires(ModTags.BASE_WIZARD_LEGGINGS)
+                .requires(SSItemRegistry.SPECTOR_RUNE.get())
+                .requires(ItemRegistry.ARCANE_ESSENCE.get())
+                .unlockedBy("has_wizard",  has(ModTags.BASE_WIZARD_LEGGINGS))
+                .save(writer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.COMBAT, SSItemRegistry.SPECTOR_BOOTS.get())
+                .requires(ModTags.BASE_WIZARD_BOOTS)
+                .requires(SSItemRegistry.SPECTOR_RUNE.get())
+                .requires(ItemRegistry.ARCANE_ESSENCE.get())
+                .unlockedBy("has_wizard",  has(ModTags.BASE_WIZARD_BOOTS))
+                .save(writer);
     }
 }

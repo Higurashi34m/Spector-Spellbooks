@@ -16,6 +16,9 @@ public class SSEnUsLanguageProvider extends BaseLanguageProvider {
         addAttribute(SSAttributeRegistry.SPECTOR_SPELL_POWER, "Spector Spell Power");
         addAttribute(SSAttributeRegistry.SPECTOR_MAGIC_RESIST, "Spector Magic Resistance");
 
+        // Creative Tab
+        add("creative_tab.spector_spellbooks", "Spector Spellbooks");
+
         // Effect
         addEffect(SSEffectRegistry.SHIFT, "Shift");
         addEffect(SSEffectRegistry.SPECTOR_BOLT, "Spectral Bolt");
@@ -26,12 +29,13 @@ public class SSEnUsLanguageProvider extends BaseLanguageProvider {
         addItem(SSItemRegistry.SPECTOR_ESSENCE, "Spector Essence");
         addItem(SSItemRegistry.SPECTOR_LUMP_INGOT, "Spector Lump Ingot");
         addItem(SSItemRegistry.SPECTOR_RUNE,  "Spector Rune");
-        addItem(SSItemRegistry.SPECTOR_HELMET, "Spector Helmet");
-        addItem(SSItemRegistry.SPECTOR_CHESTPLATE, "Spector Chestplate");
-        addItem(SSItemRegistry.SPECTOR_LEGGINGS, "Spector Leggings");
-        addItem(SSItemRegistry.SPECTOR_BOOTS, "Spector Boots");
+        addItem(SSItemRegistry.SPECTOR_UPGRADE_ORB, "Spector Upgrade Orb");
+        addItem(SSItemRegistry.SPECTOR_HELMET, "Ghost's Rag Helmet");
+        addItem(SSItemRegistry.SPECTOR_CHESTPLATE, "Ghost's Rag Chestplate");
+        addItem(SSItemRegistry.SPECTOR_LEGGINGS, "Ghost's Rag Leggings");
+        addItem(SSItemRegistry.SPECTOR_BOOTS, "Ghost's Rag Boots");
         addItem(SSItemRegistry.SPECTOR_SCYTHE,  "Spector Scythe");
-        addItem(SSItemRegistry.SPECTOR_SPELLBOOK, "Spector Spellbook");
+        addItem(SSItemRegistry.SPECTOR_SPELLBOOK, "The Ghostly Book");
 
         // School
         addSchool(SSSchoolRegistry.SPECTOR, "spector");
