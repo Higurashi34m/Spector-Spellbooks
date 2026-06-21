@@ -1,9 +1,6 @@
 package dev.higurashi.spector_spellbooks.datagen.client.lang;
 
-import dev.higurashi.spector_spellbooks.registry.SSAttributeRegistry;
-import dev.higurashi.spector_spellbooks.registry.SSItemRegistry;
-import dev.higurashi.spector_spellbooks.registry.SSSchoolRegistry;
-import dev.higurashi.spector_spellbooks.registry.SSSpellRegistry;
+import dev.higurashi.spector_spellbooks.registry.*;
 import net.minecraft.data.PackOutput;
 
 import java.util.Locale;
@@ -18,6 +15,12 @@ public class SSEnUsLanguageProvider extends BaseLanguageProvider {
         // Attribute
         addAttribute(SSAttributeRegistry.SPECTOR_SPELL_POWER, "Spector Spell Power");
         addAttribute(SSAttributeRegistry.SPECTOR_MAGIC_RESIST, "Spector Magic Resistance");
+
+        // Effect
+        addEffect(SSEffectRegistry.SHIFT, "Shift");
+        addEffect(SSEffectRegistry.SPECTOR_BOLT, "Spectral Bolt");
+        addEffect(SSEffectRegistry.POLTERGEIST, "Poltergeist");
+        addEffect(SSEffectRegistry.WRAITH_GRIP, "Wraith Grip");
 
         // Item
         addItem(SSItemRegistry.SPECTOR_ESSENCE, "Spector Essence");

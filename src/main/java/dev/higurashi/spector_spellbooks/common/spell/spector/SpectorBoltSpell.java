@@ -19,7 +19,7 @@ import net.minecraft.world.level.Level;
 import java.util.List;
 
 public class SpectorBoltSpell extends AbstractSpell {
-    private static final ResourceLocation SPELL_ID = SpectorSpellbooks.id("bolt");
+    private static final ResourceLocation SPELL_ID = SpectorSpellbooks.id("spector_bolt");
     private static final DefaultConfig CONFIG = new DefaultConfig()
             .setSchoolResource(SSSchoolRegistry.SPECTOR_RESOURCE)
             .setMinRarity(SpellRarity.RARE)

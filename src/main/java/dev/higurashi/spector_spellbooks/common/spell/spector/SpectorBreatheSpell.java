@@ -38,7 +38,7 @@ public class SpectorBreatheSpell extends AbstractSpell {
         this.baseManaCost = 7;
         this.baseSpellPower = 1;
         this.manaCostPerLevel = 2;
-        this.spellPowerPerLevel = 2;
+        this.spellPowerPerLevel = 1;
     }
 
     @Override

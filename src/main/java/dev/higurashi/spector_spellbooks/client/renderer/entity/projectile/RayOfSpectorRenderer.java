@@ -61,7 +61,6 @@ public class RayOfSpectorRenderer extends EntityRenderer<RayOfSpectorEntity> {
             renderInnerCore(poseStack, source, animTime, lifeTime);
         }
 
-
         poseStack.popPose();
         super.render(entity, yaw, delta, poseStack, source, packedLight);
     }

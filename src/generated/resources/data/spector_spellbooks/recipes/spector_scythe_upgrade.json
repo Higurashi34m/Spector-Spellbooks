@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "spector_spellbooks:spector_lump_ingot"
+  },
+  "base": {
+    "item": "irons_spellbooks:decrepit_scythe"
+  },
+  "result": {
+    "item": "spector_spellbooks:spector_scythe"
+  },
+  "template": {
+    "item": "irons_spellbooks:timeless_slurry"
+  }
+}

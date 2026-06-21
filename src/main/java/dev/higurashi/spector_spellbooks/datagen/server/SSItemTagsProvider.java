@@ -8,6 +8,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -24,5 +25,6 @@ public class SSItemTagsProvider extends ItemTagsProvider {
         this.tag(SSTagRegistry.SPECTOR_FOCUS).add(SSItemRegistry.SPECTOR_ESSENCE.get());
         this.tag(ModTags.SCHOOL_FOCUS).addTag(SSTagRegistry.SPECTOR_FOCUS);
         this.tag(ModTags.SPELLBOOK_CURIO).add(SSItemRegistry.SPECTOR_SPELLBOOK.get());
+        this.tag(Tags.Items.INGOTS).add(SSItemRegistry.SPECTOR_LUMP_INGOT.get());
     }
 }

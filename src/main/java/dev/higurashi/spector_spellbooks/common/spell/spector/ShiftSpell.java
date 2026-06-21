@@ -19,7 +19,7 @@ import net.minecraft.world.level.Level;
 import java.util.List;
 
 public class ShiftSpell extends AbstractSpell {
-    private static final ResourceLocation SPELL_ID = SpectorSpellbooks.id("shift_spell");
+    private static final ResourceLocation SPELL_ID = SpectorSpellbooks.id("shift");
     private static final DefaultConfig CONFIG = new DefaultConfig()
             .setSchoolResource(SSSchoolRegistry.SPECTOR_RESOURCE)
             .setMinRarity(SpellRarity.LEGENDARY)

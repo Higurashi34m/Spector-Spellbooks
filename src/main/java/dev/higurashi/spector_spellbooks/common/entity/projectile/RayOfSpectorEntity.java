@@ -17,5 +17,6 @@ public class RayOfSpectorEntity extends RayOfFrostVisualEntity {
         this.setPos(start.add(0, -0.75, 0));
         this.distance = (float) start.distanceTo(end);
         this.setRot(caster.getYRot(), caster.getXRot());
+        this.noCulling = true;
     }
 }

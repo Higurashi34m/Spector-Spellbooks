@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "spector_spellbooks:spector_essence"
+    },
+    "M": {
+      "item": "irons_spellbooks:mithril_ingot"
+    }
+  },
+  "pattern": [
+    "EEE",
+    "EME",
+    "EEE"
+  ],
+  "result": {
+    "item": "spector_spellbooks:spector_lump_ingot"
+  },
+  "show_notification": true
+}
