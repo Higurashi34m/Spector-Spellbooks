@@ -19,7 +19,7 @@ public class SSDamageTypeProvider implements DataProvider {
 
     @Override @NotNull
     public CompletableFuture<?> run(@NotNull CachedOutput output) {
-        Path path = this.output.getOutputFolder(PackOutput.Target.DATA_PACK).resolve("spector_spellbooks/damage_types/spector_magic.json");
+        Path path = this.output.getOutputFolder(PackOutput.Target.DATA_PACK).resolve("spector_spellbooks/damage_type/spector_magic.json");
 
         JsonObject root = new JsonObject();
         root.addProperty("exhaustion", 0);
