@@ -1,14 +1,11 @@
 package dev.higurashi.spector_spellbooks.registry;
 
+import dev.higurashi.daybreaklib.api.registry.DamageTypeRegistryManager;
+import dev.higurashi.daybreaklib.api.registry.reference.DamageTypeRef;
 import dev.higurashi.spector_spellbooks.SpectorSpellbooks;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.damagesource.DamageType;
 
 public class SSDamageTypeRegistry {
-    public static final ResourceKey<DamageType> SPECTOR_MAGIC = register("spector_magic");
+    private static final DamageTypeRegistryManager DAMAGE_TYPES = new DamageTypeRegistryManager(SpectorSpellbooks.MOD_ID);
 
-    private static ResourceKey<DamageType> register(String name) {
-        return ResourceKey.create(Registries.DAMAGE_TYPE, SpectorSpellbooks.id(name));
-    }
+    public static final DamageTypeRef SPECTOR_MAGIC = DAMAGE_TYPES.create("spector_magic");
 }

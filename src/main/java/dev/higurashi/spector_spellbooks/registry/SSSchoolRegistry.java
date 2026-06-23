@@ -27,7 +27,7 @@ public class SSSchoolRegistry {
                     SSAttributeRegistry.SPECTOR_SPELL_POWER,
                     SSAttributeRegistry.SPECTOR_MAGIC_RESIST,
                     () -> SoundEvents.VEX_DEATH,
-                    SSDamageTypeRegistry.SPECTOR_MAGIC
+                    SSDamageTypeRegistry.SPECTOR_MAGIC.key()
             ));
 
     private static RegistryObject<SchoolType> register(Supplier<SchoolType> schoolType) {
